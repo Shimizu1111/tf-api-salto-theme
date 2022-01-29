@@ -1,12 +1,21 @@
 # tf-api-salto-theme
 
+* 対象のサーバ
+https://github.com/Shimizu1111/api-salto-theme
+
+
 * 初期設定
 export AWS_ACCESS_KEY_ID=****
 export AWS_SECRET_ACCESS_KEY=****
 export AWS_DEFAULT_REGION=ap-northeast-1
 
+このファイルには****の部分は絶対記入しない
+
 * terraform init
-このファイルには絶対記入しない
+* terraform plan
+* terrafomr apply
+* terraform fmt
+
 terraform init
 
 
