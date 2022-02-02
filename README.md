@@ -35,11 +35,13 @@ export AWS_DEFAULT_REGION=ap-northeast-1
 * terraformとAWSで差分が出ないようにterraformを修正する
 
 
-### ネットワークの構成
+### インフラの構成
 * VPC
 * SG
-* RDS
 * EC2
+
+### 今後学びたいインフラの技術
+* RDS
 * Parameter Store
 * ELB
 * Route53
@@ -48,4 +50,17 @@ export AWS_DEFAULT_REGION=ap-northeast-1
 * IAM
 * ECS(FARGATE)
 * ECR
+* ALB
+* acm_certificate
+* bastion
+* croudfront
+* aws_inspector
+* cloudwatch
+* waf_cf
+* waf_region
+* datadog
+  * monitor
+  * synthetics
+  * slo
+  * dashbord
 
