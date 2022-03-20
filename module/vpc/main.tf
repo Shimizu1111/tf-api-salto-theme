@@ -102,6 +102,26 @@ resource "aws_security_group_rule" "in_icmp" {
   protocol          = "icmp"
 }
 
+# インバウンドルール(アプリケーションサーバ用)
+resource "aws_security_group_rule" "in_app" {
+  security_group_id = aws_security_group.example.id
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+  from_port         = 8080
+  to_port           = 8080
+  protocol          = "tcp"
+}
+
+# インバウンドルール(MySQL/Aurora用)
+resource "aws_security_group_rule" "in_mysql" {
+  security_group_id = aws_security_group.example.id
+  type              = "ingress"
+  cidr_blocks       = ["0.0.0.0/0"]
+  from_port         = 3306
+  to_port           = 3306
+  protocol          = "tcp"
+}
+
 # アウトバウンドルール(全開放)
 resource "aws_security_group_rule" "out_all" {
   security_group_id = aws_security_group.example.id

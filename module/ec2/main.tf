@@ -20,7 +20,7 @@ data "aws_ami" "example" {
 
   filter {
     name   = "name"
-    values = ["amzn2-ami-hvm-*"]
+    values = ["amzn2-ami-hvm-2.0.20220121.0-*"]
   }
 
   filter {
@@ -63,10 +63,10 @@ resource "aws_instance" "example" {
 # Elastic IP
 #
 # ====================
-resource "aws_eip" "example" {
-  instance = aws_instance.example.id
-  vpc      = true
-}
+# resource "aws_eip" "example" {
+#   instance = aws_instance.example.id
+#   vpc      = true
+# }
 
 # ====================
 #
@@ -74,6 +74,6 @@ resource "aws_eip" "example" {
 #
 # ====================
 # resource "aws_key_pair" "shmizu1111" {
-#   key_name   = "shmizu1111"
-#   public_key = file("shmizu1111.pem") # 先程`ssh-keygen`コマンドで作成した公開鍵を指定
+#   key_name   = ""
+#   public_key = file("") # 先程`ssh-keygen`コマンドで作成した公開鍵を指定
 # }
